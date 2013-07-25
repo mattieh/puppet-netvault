@@ -1,0 +1,125 @@
+[Configurator]
+Page Name= Network Manager
+Page Name Id= 6103
+Group Name=Services
+Group Name Id= 6104
+Icon=networkmanager
+
+[Timeouts:Connect]
+Tab Name= Timeouts
+Tab Name Id= 6105
+Type= Range
+Range= 5, 300
+Width= 4
+Label= Time (in seconds) to complete a remote connection
+Label Id= 6106
+Value= 30
+Reset=Network Manager
+
+[Timeouts:Disconnect]
+Tab Name= Timeouts
+Tab Name Id= 6107
+Type= Range
+Range= 5, 600
+Width= 4
+Label= Time (in seconds) to wait before dropping inactive connection(s)
+Label Id= 6108
+Value= 300
+Reset=Network Manager
+
+[Timeouts:Keep Alive]
+Tab Name= Timeouts
+Tab Name Id= 6109
+Type= Range
+Range= 1, 60
+Width= 4
+Label= Keep Alive rate (in seconds)
+Label Id= 6110
+Value= 15
+Reset=Network Manager
+
+[Timeouts:Broadcast]
+Tab Name= Timeouts
+Tab Name Id= 6111
+Type= Range
+Range= 5, 30000
+Width= 6
+Label= Time (in seconds) between availability broadcasts
+Label Id= 6112
+Value= 300
+Reset=Network Manager
+
+[Timeouts:Security]
+Tab Name= Timeouts
+Tab Name Id= 6113
+Type= Range
+Range= 5, 30000
+Width= 6
+Label= Time (in seconds) between security broadcasts
+Label Id= 6114
+Value= 300
+Reset=Network Manager
+
+[Timeouts:Check Broadcast]
+Tab Name= Timeouts
+Tab Name Id= 6824
+Type= Range
+Range= 1, 30000
+Width= 6
+Label= Time (in seconds) between availability checks
+Label Id= 6825
+Value= 10
+Reset=Network Manager
+
+[Network:Broadcast]
+Tab Name= Connections
+Tab Name Id= 6115
+Type= CheckBox
+Value= FALSE 
+Label= Broadcast details to machines on local networks
+Label Id= 6116
+Reset=Network Manager
+
+[Network:Preferred Address]
+Tab Name= Connections
+Tab Name Id= 6117
+Type= String
+Width= 32
+Label= Preferred network address
+Label Id= 6118
+Value=<%= @backupip %>
+Reset=Network Manager
+
+[Network:Barred Addresses]
+Tab Name= Connections
+Tab Name Id= 6119
+Type= String
+Width= 32
+Label= Comma separated list of barred !naddress(es)
+Label Id= 6120
+Value=
+Reset=Network Manager
+
+[Network:Fallback Addresses]
+Tab Name= Connections
+Tab Name Id= 6121
+Type= String
+Width= 32
+Label= Comma separated list of fallback !naddress(es)
+Label Id= 6122
+Value=
+Reset=Network Manager
+
+[Network:Dontresolve Addresses]
+Tab Name= Connections
+Tab Name Id= 6123
+Type= String
+Width= 32
+Label= Comma separated list of networks and !naddresses not to resolve
+Label Id= 6124
+Value=10.0.0.0!,17.0.0.0!,79.0.0.0!,81.0.0.0!,82.0.0.0!,83.0.0.0!,91.0.0.0!,172.0.0.0!,192.0.0.0!,193.0.0.0!,194.0.0.0!,195.0.0.0!,213.0.0.0!,217.0.0.0
+Reset=Network Manager
+
+
+[Revision:Version Index]
+Value=1374659273

@@ -1,0 +1,141 @@
+[Configurator]
+Page Name= Plugin Options
+Page Name Id= 109910724
+
+[BackupExcludes:FSUBackupFileExcludes]
+Tab Name= File System Plugin
+Tab Name Id= 109911060
+Type=String
+Width=64
+Label= Backup Exclusion List - Name Based Patterns
+Label Id= 109911038
+Help=See documentation for a description of the file format
+Help Id= 0
+Value=
+
+[BackupExcludes:FSUBackupPathExcludes]
+Tab Name= File System Plugin
+Tab Name Id= 109911061
+Type=String
+Width=64
+Label=Backup Exclusion List - Path Based Patterns
+Label Id= 109911039
+Help=See documentation for a description of the file format
+Help Id= 0
+Value=/root/backup/exclude.txt
+
+[RestoreExcludes:FSURestoreFileExcludes]
+Tab Name= File System Plugin
+Tab Name Id= 109911062
+Type=String
+Width=64
+Label= Restore Exclusion List - Name Based Patterns
+Label Id= 109911040
+Help=See documentation for a description of the file format
+Help Id= 0
+Value=
+
+[RestoreExcludes:FSURestorePathExcludes]
+Tab Name= File System Plugin
+Tab Name Id= 109911063
+Type=String
+Width=64
+Label= Restore Exclusion List - Path Based Patterns
+Label Id= 109911041
+Help=See documentation for a description of the file format
+Help Id= 0
+Value=
+
+[Recs:DirectoriesInitSize]
+Tab Name= File System Plugin
+Tab Name Id= 109911064
+Type=Range
+Range= 1048576,104857600
+Multiplier= 1048576
+Width= 7
+Label=Initial Size of Memory Cache for Analyzing Directories to Restore (MB)
+Label Id= 109911042
+Help=Initial Size of Memory Cache for Analyzing Directories to Restore (MB)
+Help Id= 0
+Value=1048576
+
+[Recs:DirectoriesMaxSize]
+Tab Name= File System Plugin
+Tab Name Id= 109911065
+Type=Range
+Range= 1048576,104857600
+Multiplier= 1048576
+Width= 7
+Label=Maximum Size of Memory Cache for Analyzing Directories to Restore (MB)
+Label Id= 109911043
+Help=Maximum Size of Memory Cache for Analyzing Directories to Restore (MB)
+Help Id= 0
+Value=10485760
+
+[Recs:EntriesInitSize]
+Tab Name= File System Plugin
+Tab Name Id= 109911066
+Type=Range
+Range= 1048576,104857600
+Multiplier= 1048576
+Width= 7
+Label=Initial Size of Memory Cache for Analyzing Entries to Restore (MB)
+Label Id= 109911044
+Help=Initial Size of Memory Cache for Analyzing Entries to Restore (MB)
+Help Id= 0
+Value=1048576
+
+[Recs:EntriesMaxSize]
+Tab Name= File System Plugin
+Tab Name Id= 109911067
+Type=Range
+Range= 1048576,104857600
+Multiplier= 1048576
+Width= 7
+Label=Maximum Size of Memory Cache for Analyzing Entries to Restore (MB)
+Label Id= 109911045
+Help=Maximum Size of Memory Cache for Analyzing Entries to Restore (MB)
+Help Id= 0
+Value=10485760
+
+[Misc:ResetAccessTimes]
+Tab Name= File System Plugin
+Tab Name Id= 109911160
+Type= CheckBox
+Value= FALSE
+Label= Reset Access Times
+Label Id= 109911161
+
+[Overwrite:Directory Permissions on Restore]
+value=FALSE
+
+[Performance:DoRecursiveAutoMountScan]
+Value=TRUE
+
+[Performance:Maximum Filesystem Read]
+Tab Name=File System Plugin
+Tab Name Id=109911068
+Type=Range
+Range=0,32768000
+Multiplier=1024
+Width=7
+Label=Maximum File System Read (KB) (0 = No Maximum)
+Label Id=109911046
+Help=Maximum data to read from filesystem
+Help Id=0
+value=0
+
+
+[Performance:Maximum Filesystem Write]
+Tab Name=File System Plugin
+Tab Name Id=109911069
+Type=Range
+Range=0,32768000
+Multiplier=1024
+Width=7
+Label=Maximum File System Write (KB) (0 = No Maximum)
+Label Id=109911047
+Help=Maximum data to write to filesystem
+Help Id=0
+value=0
+

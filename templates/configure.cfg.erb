@@ -1,0 +1,175 @@
+[Configurator]
+Page Name= General
+Page Name Id= 5959
+Group Name=System and Security
+Group Name Id= 5960
+Icon=general
+
+[Jobs]
+Diagnose Exit Status= FALSE
+
+[Trace:Do Crash]
+Value= FALSE
+
+[Trace:Trace To File]
+Type= CheckBox
+Value= FALSE
+Label= Generate debugging files
+Label Id= 5961
+Help= If enabled, Netvault will generate diagnostic trace files.
+Help Id= 0
+reset=process manager
+
+[Trace:Use Bakbone Time]
+Type= CheckBox
+Value= TRUE
+Label= Use Bakbone time in debugging files
+Label Id= 5962
+Help= If enabled, Netvault will use Bakbone time in diagnostic trace files.
+Help Id= 0
+View level=7
+
+[Trace:Lines per File]
+Type= Range
+Range= 0, 32000
+Width= 6
+Value= 0
+Label= Lines per trace file (x 1000) 0 = do not split
+Label Id= 5963
+Multiplier= 1000
+
+[Trace:Files to Keep]
+Type= Range
+Range= 0, 1000
+Width= 6
+Value= 0
+Label= Trace file to keep per session (0 = keep all)
+Label Id= 5964
+
+[Data Channels:Minimum TCP Send Buffer Size]
+Type= Range
+Range= 1024, 16777216
+Width= 6
+Value= 1024
+Label= Minimum network send buffer size (Kb)
+Label Id= 5972
+Multiplier= 1024
+reset=process manager
+
+[Data Channels:Maximum TCP Send Buffer Size]
+Type= Range
+Range= 1024, 16777216
+Width= 6
+Value= 16777216
+Label= Maximum network send buffer size (Kb)
+Label Id= 5973
+Multiplier= 1024
+reset=process manager
+
+[Data Channels:Minimum TCP Receive Buffer Size]
+Type= Range
+Range= 1024, 16777216
+Width= 6
+Value= 1024
+Label= Minimum network receive buffer size (Kb)
+Label Id= 5974
+Multiplier= 1024
+reset=process manager
+
+[Data Channels:Maximum TCP Receive Buffer Size]
+Type= Range
+Range= 1024, 16777216
+Width= 6
+Value= 16777216
+Label= Maximum network receive buffer size (Kb)
+Label Id= 5975
+Multiplier= 1024
+reset=process manager
+
+[Packages:Check System]
+Type= CheckBox
+Label= Package Install System Check
+Label Id= 5976
+Value=TRUE
+View level=7
+
+[Directories:Database]
+Type=String
+Width=32
+Label=Database Directory
+Label Id=5965
+Help=Directory in which to place Netvault's on-line database
+Help Id=0
+reset=process manager
+Value=/usr/netvault/db
+
+[Directories:Trace]
+Type=String
+Width=32
+Label=Trace Directory
+Label Id=5966
+Help=Directory in which to place Netvault's trace files (if enabled).
+Help Id=0
+reset=process manager
+Value=/usr/netvault/trace
+
+[Directories:Logs]
+Type=String
+Width=32
+Label=Log Directory
+Label Id=5967
+Help=Directory in which to place Netvault's log files.
+Help Id=0
+reset=process manager
+Value=/usr/netvault/logs
+
+[Directories:Tmp]
+Type=String
+Width=32
+Label=Temporary Directory
+Label Id=5968
+Help=Directory in which NetVault may place temporary files
+Help Id=0
+reset=process manager
+Value=/usr/netvault/tmp
+
+[Directories:Reports]
+Type=String
+Width=32
+Label=Reports Directory
+Label Id=5969
+Help=Directory for all report files,including templates and output
+Help Id=0
+reset=process manager
+Value=/usr/netvault/reports
+
+[Directories:Stats]
+Type=String
+Width=32
+Label=Statistics Directory
+Label Id=5970
+Help=Directory for temporary storage of statistics
+Help Id=0
+reset=process manager
+Value=/usr/netvault/stats
+
+[Machine]
+clients=<%= @contract %>
+Name=<%= @contract %>
+
+[Details]
+Description=
+Server=FALSE
+
+
+[Locale:Catalog]
+Type=Combo
+Width=16
+Value=English
+Label=Language Selection
+Label Id=5971
+Help=The language in which NetVault will interact with users.
+Help Id=0
+reset=process manager
+Range=English,ChineseSimp,French,German,JapaneseEUC,Korean
+
